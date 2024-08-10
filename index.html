@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateC | devpython88</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a class="headerLinks" href="https://github.com/devpython88/CreateC">GitHub</a>
+        <a class="headerLinks" onclick="onSourceCodeClick()">Source Code</a>
+    </header>
+    <div class="main">
+        <h1>CreateC</h1>
+        <h3>An easy-to-use C++ Build-system.</h3>
+
+        <section class="about">
+            <fieldset>
+                <legend>About</legend>
+                <p>CreateC is a easy to use c++ json-base build system</p>
+                <p>It simplifies stuff like linking Qt5, GTK+ or GTKmm with your app</p>
+                <p>Normally if you use CMake or Make. You would either have to find the package using the build system
+                    or
+                    use pkg-config.</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>CreateC library linking</legend>
+                <p>In CreateC you can simple add a libraries entry in your make.json file.
+                    <br>The entry should be a array with the names of your libraries
+                    <br>For SDL2, raylib, SFML, etc... You just add the name of the library into the entry array
+                    <br>For Qt5, You need to add qt5widgets, qt5core and qt5gui into the libraries entry based on your
+                    needs
+                    <br>For GTK+, Simply add gtk3 into the libraries entry
+                    <br>For GTKmm, Simple add gtkmm into the libraries entry
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>CreateC Example JSON file</legend>
+                <p>Here is a example json file</p>
+                <pre>
+                {
+                    "project": "YourProjectName",
+                    "sources": [
+                        "src/main.cpp",
+                        "src/mymod.h",
+                        "src/mymod.cpp",
+                        ...
+                    ],
+                    "libraries": [
+                        "SFML",
+                        "SDL2",
+                        "raylib",
+                        "qt5widgets",
+                        "qt5core",
+                        "qt5gui",
+                        "gtk3",
+                        "gtkmm"
+                    ],
+                    "cppstd": "17",
+                    "optlvl": 3 // for -O3. It can also be 1 or 2
+                }
+            </pre>
+            </fieldset>
+        </section>
+    </div>
+</body>
+
+</html>
